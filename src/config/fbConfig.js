@@ -9,8 +9,8 @@ var config = {
     projectId: "doctor-tarp",
     storageBucket: "doctor-tarp.appspot.com",
     messagingSenderId: "589544158461",
-    appId: "1:589544158461:web:f90c7ebb62349004453a94",
-    measurementId: "G-3FK4YLR1XC"
+    appId: "1:589544158461:web:03786af4dcd86474453a94",
+    measurementId: "G-6X3YGJWPF9"
   };
   firebase.initializeApp(config);
   

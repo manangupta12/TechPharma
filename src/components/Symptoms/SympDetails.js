@@ -14,6 +14,7 @@ const SympDetails = (props) => {
       <div className="container section symptom-details">
         <div className="card z-depth-0">
           <div className="card-content">
+          <img src="https://img.icons8.com/bubbles/50/000000/stethoscope.png"/>
             <span className="card-title">{student.name}  - {student.regno}</span>
             {/* <p>{student.symptoms}</p> */}
             <Symptoms prescriptions = {prescription}/>

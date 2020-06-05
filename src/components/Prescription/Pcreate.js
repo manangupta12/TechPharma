@@ -3,6 +3,10 @@ import { connect } from 'react-redux'
 import { createPrescription } from '../../store/actions/doctorActions'
 import { Redirect } from 'react-router-dom'
 import {changeStatus} from '../../store/actions/doctorActions'
+import {toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import doc from "../../doc.gif"
+toast.configure()
 
 class CreatePrescription extends Component {
   state = {
@@ -10,12 +14,14 @@ class CreatePrescription extends Component {
     intake: '',
     message: ''
   }
+
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
     })
   }
   handleSubmit = (e) => {
+    toast.info('Prescription has been submitted !',{position: toast.POSITION.TOP_RIGHT,autoClose:3000})
     e.preventDefault();
     this.props.changeStatus(this.props.id,"COMPLETED");
     this.props.createPrescription(this.props.id,this.state);
@@ -25,7 +31,7 @@ class CreatePrescription extends Component {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' /> 
     return (
-      <div className="container">
+      <div className="container col s12 m6">
         <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Create Prescription</h5>
           <div className="input-field">
@@ -44,6 +50,9 @@ class CreatePrescription extends Component {
             <button className="btn pink lighten-1">Prescribe</button>
           </div>
         </form>
+        <div className="col s12 m5">
+        <img src = {doc}></img>
+        </div>
       </div>
     )
   }

@@ -21,7 +21,7 @@ const ProjectDetails = (props) => {
           <h5>Symptoms :</h5>
           {prescription.symptoms.map(symptom => {
               return(
-                <span className="red-text card-title">- {symptom}</span>
+                <span className="red-text card-title"><img src="https://img.icons8.com/office/16/000000/high-risk.png"/>  {symptom}</span>
               )
           })}
             
