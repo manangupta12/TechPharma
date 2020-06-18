@@ -31,4 +31,4 @@ efficiency of the health center and also will
 have a positive influence on the student
 body.
 
-All the details can be found out in [the reasearch paper](https://github.com/manangupta12/TechPharma/edit/master/)
+All the details can be found out in [the reasearch paper](https://github.com/manangupta12/TechPharma/blob/master/Techpharma_research%20paper.pdf)
